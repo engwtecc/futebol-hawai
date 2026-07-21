@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>⚽ Futebol Hawai</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .highlight { background-color: #ffcccc; }
+    .inactive { color: #aaa; }
+  </style>
+</head>
+<body class="p-6 bg-gray-100 flex flex-col md:flex-row gap-6">
+  <!-- Coluna esquerda -->
+  <div class="w-full md:w-1/2">
+    <h1 class="text-2xl font-bold mb-4">⚽ Futebol Hawai</h1>
+
+    <div class="mb-4">
+      <input id="nomeJogador" placeholder="Nome do jogador" class="border p-2 rounded" />
+      <button id="btn-adicionar" class="bg-blue-500 text-white px-4 py-2 rounded ml-2">Adicionar</button>
+      <button id="btn-reset" class="bg-red-600 text-white px-4 py-2 rounded ml-2">Resetar Campeonato</button>
+    </div>
+
+    <h2 class="text-lg font-semibold">Jogadores</h2>
+    <ul id="listaJogadores" class="mb-4 list-disc pl-6"></ul>
+
+    <button id="btn-partida" class="bg-green-600 text-white px-4 py-2 rounded">Iniciar Partida</button>
+
+    <h2 class="mt-6 text-lg font-semibold">Partida Atual</h2>
+    <div id="partidaAtual" class="mt-2 p-4 border rounded bg-white"></div>
+
+    <h2 class="mt-6 text-lg font-semibold">Histórico de Partidas</h2>
+    <div id="historicoPartidas" class="mt-2 space-y-2"></div>
+  </div>
+
+  <!-- Coluna direita -->
+  <div class="w-full md:w-1/2">
+    <h2 class="text-lg font-semibold mb-2">Tabela</h2>
+    <div class="overflow-x-auto">
+      <table class="border border-gray-400 w-full text-center text-sm" id="tabela">
+        <thead>
+          <tr>
+            <th class="border border-gray-400 px-2">Jogador</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
